@@ -1,3 +1,7 @@
+*.swp
+ex00/easyfind
+
+
 # Prerequisites
 *.d
 
