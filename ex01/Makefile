@@ -1,5 +1,5 @@
 NAME = span 
-VERBOSE = 1
+VERBOSE = 0
 
 CPP_FLAGS = -Wall -Wextra -Werror --std=c++98
 
