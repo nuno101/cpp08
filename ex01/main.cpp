@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:48:28 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/28 11:49:42 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/28 12:02:59 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,10 @@ int	main( void )
 	sp3.show_all();
 	std::cout << "Shortest distance should be 1: " << sp3.shortestSpan() << std::endl;
 	std::cout << "Longest distance should be " << count - 1 << ": " << sp3.longestSpan() << std::endl;
+
+	// Assign operator test
+	sp3 = sp2;
+	sp3.show_all();
 
 	return 0;
 }

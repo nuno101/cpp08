@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 16:28:08 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/28 11:42:24 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/28 12:03:25 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,17 @@ Span::Span( unsigned int max_size) : _count( 0 ), _max_size( max_size )
 {
 }
 
-Span::Span( const Span &src) : _count( src._count ), _max_size( src._max_size )
+Span::Span( const Span &src ) : _count( src._count ), _max_size( src._max_size )
 {
 	*this = src;
+}
+
+Span & Span::operator=( const Span &src )
+{
+	this->_count =  src._count;
+	this->_max_size = src._max_size;
+	this->_vector = src._vector;
+	return *this;
 }
 
 Span::~Span()
@@ -48,7 +56,6 @@ unsigned int	Span::shortestSpan()
 		temp = ( *(itr+1) - *itr );
 		if( temp < distance )
 			distance = temp;
-		//std::cout << "Min distance: " << distance << std::endl;
 	}
 	return distance;
 }

@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 16:25:23 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/28 11:43:24 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/28 11:52:07 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class Span
 	public:
 		Span ( unsigned int max_size);
 		Span ( const Span &src);
+		Span &operator=( const Span &src );
 		~Span();
 		void			addNumber( int number );
 		unsigned int	shortestSpan();
