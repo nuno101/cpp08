@@ -44,4 +44,20 @@ MutantStack<T>::~MutantStack()
 		std::cout << "Destructor called" << std::endl;
 }
 
+template <typename T>
+typename std::stack<T>::container_type::iterator MutantStack<T>::begin()
+{
+	if ( VERBOSE )
+		std::cout << "Begin called" << std::endl;
+	return this->c.begin();
+}
+
+template <typename T>
+typename std::stack<T>::container_type::iterator MutantStack<T>::end()
+{
+	if ( VERBOSE )
+		std::cout << "End called" << std::endl;
+	return this->c.end();
+}
+
 #endif
