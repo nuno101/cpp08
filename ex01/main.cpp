@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:48:28 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/28 10:36:44 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/28 11:49:42 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main( void )
 	sp.addNumber(9);
 	sp.addNumber(11);
 	if ( VERBOSE )
-		sp.showAll();
+		sp.show_all();
 	std::cout << sp.shortestSpan() << std::endl;
 	std::cout << sp.longestSpan() << std::endl;
 
@@ -32,6 +32,15 @@ int	main( void )
 	Span sp2( sp );
 	std::cout << sp2.shortestSpan() << std::endl;
 	std::cout << sp2.longestSpan() << std::endl;
+
+	// Add many numbers to span
+	int count = 10000;
+	std::cout << "Test with " << count << " elements:"<< std::endl;
+	Span sp3 = Span( count );
+	sp3.fill_identity( count );
+	sp3.show_all();
+	std::cout << "Shortest distance should be 1: " << sp3.shortestSpan() << std::endl;
+	std::cout << "Longest distance should be " << count - 1 << ": " << sp3.longestSpan() << std::endl;
 
 	return 0;
 }
