@@ -1,10 +1,10 @@
 NAME = mutated_abobination
-VERBOSE = 0
+VERBOSE = 1
 
 #CPP_FLAGS = -Wall -Wextra -Werror --std=c++98 -fsanitize=address
 CPP_FLAGS = -Wall -Wextra -Werror --std=c++98
 
-CPP_FILES = main.cpp MutantStack.cpp
+CPP_FILES = main.cpp
 HPP_FILES = MutantStack.hpp
 
 O_FILES = $(CPP_FILES:%cpp=%o)
