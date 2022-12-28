@@ -1,8 +1,8 @@
 NAME = span 
 VERBOSE = 0
 
-CPP_FLAGS = -Wall -Wextra -Werror --std=c++98 -fsanitize=address
-#CPP_FLAGS = -Wall -Wextra -Werror --std=c++98
+#CPP_FLAGS = -Wall -Wextra -Werror --std=c++98 -fsanitize=address
+CPP_FLAGS = -Wall -Wextra -Werror --std=c++98
 
 CPP_FILES = main.cpp Span.cpp
 HPP_FILES = Span.hpp
