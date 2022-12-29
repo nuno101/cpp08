@@ -6,12 +6,16 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 16:28:08 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/28 12:03:25 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/29 09:17:15 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Span.hpp"
+
+Span::Span() : _count( 0 ), _max_size(0)
+{
+}
 
 Span::Span( unsigned int max_size) : _count( 0 ), _max_size( max_size )
 {
@@ -73,8 +77,10 @@ void	Span::show_all()
 	//std::sort( _vector.begin(), _vector.end() );
 	std::vector<int>::iterator itr;
 	for( itr = _vector.begin(); itr != _vector.end(); itr++ )
-		std::cout << *itr << std::endl;
+		std::cout << *itr << " ";
+		//std::cout << *itr << std::endl;
 		//std::cout << *itr << " next: " << *(itr+1) << " Distance: " << *(itr+1) - *itr << std::endl;
+	std::cout << std::endl;
 }
 
 void	Span::fill_identity( unsigned int n )

@@ -6,7 +6,7 @@
 /*   By: nlouro <nlouro@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 11:48:28 by nlouro            #+#    #+#             */
-/*   Updated: 2022/12/28 12:02:59 by nlouro           ###   ########.fr       */
+/*   Updated: 2022/12/29 09:16:28 by nlouro           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,10 @@ int	main( void )
 	// Assign operator test
 	sp3 = sp2;
 	sp3.show_all();
+
+	// Default constructor
+	//Span sp4 = Span();
+	//sp4.show_all();
 
 	return 0;
 }
